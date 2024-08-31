@@ -1,0 +1,15 @@
+<% content_for :title, "Editing friend" %>
+
+<h1>Editing friend</h1>
+<br/>
+<%= render "form", friend: @friend %>
+
+<br/>
+
+
+  <%= link_to "Show", @friend,class:"btn btn-secondary" %> 
+  <span>
+     <%= link_to 'Delete', @friend, method: :delete, data: {turbo_method: :delete,turbo_confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+  </span>
+  <%= link_to "Back", friends_path,class:"btn btn-dark" %>
+
